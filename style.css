@@ -42,3 +42,24 @@
     transition: all 0.05sec;
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
+
+.hour-hand {
+    width: 35%;
+    top: 50%;
+    left: 15%;
+    background-color: var(--fourthcolor);
+}
+
+.second-hand {
+    height: 5px;
+    width: 46%;
+    left: 4%;
+    background-color: var(--secondcolor);
+}
+
+.min-hand {
+    width: 43%;
+    left: 7%;
+    background-color: var(--thirdcolor);
+    height: 9px;
+}
