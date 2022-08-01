@@ -1,0 +1,44 @@
+:root {
+    --maincolor: #FFE7BF;
+    --secondcolor: #FFC4C4;
+    --thirdcolor: #FF869E;
+    --fourthcolor: #FF869E;
+    --fifthcolor: #A10035; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato'; 
+    scroll-behavior: smooth;   
+    background-color: var(--maincolor);
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+}
+
+.clock-face {
+    border: 20px var(--fifthcolor) solid ;
+    border-radius : 50%;
+    width : 360px;
+    height: 360px;
+    position: relative;
+}
+
+.hand {
+    width: 50%;
+    height: 10px;
+    background-color: var(--fifthcolor);
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05sec;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
