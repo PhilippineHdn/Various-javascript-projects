@@ -19,6 +19,5 @@ function setDate() {
 
 }
 
-setDate()
 
-// setInterval(setDate, 1000);
+setInterval(setDate, 1000);
