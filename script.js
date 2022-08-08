@@ -1,6 +1,7 @@
 const secondHand = document.querySelector('.second-hand');
 const minuteHand = document.querySelector('.min-hand');
 const hoursHand = document.querySelector('.hour-hand');
+const inputs = document.querySelectorAll('.controls input');
 
 function setDate() {
     const now = new Date();
@@ -19,5 +20,13 @@ function setDate() {
 
 }
 
-
 setInterval(setDate, 1000);
+
+function HandleUpdate() {
+    const suffix = this.dataset.sizing || '';
+    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+}
+
+inputs.forEach(input => input.addEventListener('change', HandleUpdate));
+inputs.forEach(input => input.addEventListener('mousemove', HandleUpdate));
+
