@@ -4,6 +4,8 @@
     --thirdcolor: #FF869E;
     --fourthcolor: #FF869E;
     --fifthcolor: #A10035; 
+    --base: #a10035;
+    --blur: 10px;
 }
 
 * {
@@ -15,11 +17,15 @@
     background-color: var(--maincolor);
 }
 
+.title {
+    text-align: center;
+    margin: 20px 0;
+}
+
 .clock {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25vh;
 }
 
 .clock-face {
@@ -62,4 +68,24 @@
     left: 7%;
     background-color: var(--thirdcolor);
     height: 9px;
+}
+
+.picture {
+    width: 100vh;
+    display: flex;
+    margin: 20px auto;   
+    padding: 10px;
+    background: var(--base);
+    filter: blur(var(--blur));
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.label {
+    font-size: 25px;
+    margin: 0 10px;
 }

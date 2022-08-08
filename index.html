@@ -5,12 +5,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Clock</title>
+        <title>JavaScript Projects</title>
         <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        
+        <h1 class="title">My first clock</h1>
+
         <div class="clock">
             <div class="clock-face">
                 <div class="hand hour-hand"></div>
@@ -18,6 +19,19 @@
                 <div class="hand second-hand"></div>
             </div>
         </div>
+
+        <h1 class="title">Adjust as you wish</h1>
+        <div class="controls">
+            <label class="label" for="blur">Blur:</label>
+            <input type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+            <label class="label" for="base">Base color</label>
+            <input type="color" name="base" value="#ffc600">
+        </div>
+        
+        <img class="picture" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80">
+        
+
 
         <script src="script.js"></script>
     </body>
