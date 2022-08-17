@@ -2,6 +2,7 @@ const secondHand = document.querySelector('.second-hand');
 const minuteHand = document.querySelector('.min-hand');
 const hoursHand = document.querySelector('.hour-hand');
 const inputs = document.querySelectorAll('.controls input');
+const panels = document.querySelectorAll('.panel');
 
 function setDate() {
     const now = new Date();
@@ -30,3 +31,15 @@ function HandleUpdate() {
 inputs.forEach((input) => input.addEventListener('change', HandleUpdate));
 inputs.forEach(input => input.addEventListener('mousemove', HandleUpdate));
 
+function toggleOpen() {
+    this.classList.toggle('open');
+}
+
+function toggleActive(e) {
+    if (e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active');
+    }
+}
+
+panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
